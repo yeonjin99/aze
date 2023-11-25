@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/loading.css' %}" rel="stylesheet" type="text/css" />
+    <title>AZE</title>
+    <script>
+        setTimeout(function(){
+                    document.getElementById("loading_btn").click();
+                }, 10000);
+
+    </script>
+</head>
+<body>
+    <div class="aze_test_div">
+        <img src="{{ aze_test }}" alt="로딩 중 입니다." id="aze_test_img">
+    </div>
+
+    <div class="loader"></div>
+
+    <div class="container" style="display:none;"></div>
+
+    <input type="hidden" id="loading_btn" onclick="location.href = '{% url 'koreaQ' %}'">
+</body>
+</html>

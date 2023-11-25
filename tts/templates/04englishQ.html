@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link href="{% static 'css/04Q.css' %}" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrapper{
+            align-items: center;
+            padding:10px 150px;
+            height:800px;
+        }
+        #circle{
+            /* width:100px; */
+            position: relative;
+            font-family: arial;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 50px 0 0 0;
+            padding: 20px 100px;
+            text-align: center;
+            
+        }
+        
+
+        p{
+            z-index: 1;
+            position: relative;
+            /* transform: translate(500px, 100px); */
+            left:160px;
+            top:60px;
+            padding: 50px 40px;
+            display:inline;
+            font-size: 30px;
+        }
+
+        #image{
+            position:relative;
+            right:30px;
+            top:40px;
+            display:inline;
+            float: right;
+        }
+
+        #inp{
+            position:absolute;
+            bottom:260px;
+            left:900px;
+        }
+    </style>
+    <script>
+        var time=10;
+        
+        var x=setInterval(function(){
+            document.getElementById("circle").innerHTML=time;
+            time--;
+
+            if (time < 0){
+                clearInterval(x);
+                document.getElementById("circle").innerHTML = "timeout";
+                setTimeout(function(){
+                    document.getElementById("submit_btn").click();
+                }, 1500);
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+
+    <h3><a href="{% url 'yes' %}"  style="text-decoration:none">A Z E</a></h3>
+	
+    <p>Q. {{ en_quiz }}?</p>
+    <br>
+    <p>{{ ts_quiz }}?</p>
+
+    <div id="image">
+        <img src="../static/images/q_aze.png" style="float: right;" alt="aze" width="1050px" height="580px">
+    </div>
+
+    <form action="{% url 'engQ' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="en_ans" value="{{ en_ans }}">
+        <input type="hidden" name="ts_ans" value="{{ ts_ans }}">
+        <div id="inp">
+            <input type="text" name="user_answer" placeholder="Guess the answer.">
+            <input type="submit" id="submit_btn" value="Enter" style="width: 100px;
+                                                        height: 72px;
+                                                        display: inline;
+                                                        font-weight: 800;
+                                                        font-size: 16pt;
+                                                        color: rgb(5, 5, 5);
+                                                        background-color: rgb(255, 181, 70);
+                                                        border-color: rgb(255, 181, 70);
+                                                        top: 80%;
+                                                        right: 45%;
+                                                        position: absolute;">
+        </div>
+    </form>
+
+
+    
+
+    <div id="wrapper">
+        <div id="circle">TIMER</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AZE</title>
+    <script>
+        function collapse(element) {
+            var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+            if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+                before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+                before.classList.remove("active");                  // 버튼 비활성화
+            }
+            element.classList.toggle("active");         // 활성화 여부 toggle
+
+            var content = element.nextElementSibling;
+            if (content.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+                content.style.maxHeight = null;         // 접기
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
+            }
+        }
+
+
+    </script>
+    {% load static %}
+    <link href="{% static 'css/03ko_en.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+        <a href="{% url 'yes' %}" style="text-decoration:none"><h2>A Z E</h2></a>
+        <div id="2">
+            <div class="left">
+                <button type="button" class="collapsible" id="korean" onclick="collapse(this);">한국</button>
+                    <div class="content">
+                        <p id="gwd"><a href="{% url 'loading_kwd' %}" style="text-decoration:none;" >강원도</a></p>
+                        <p id="ccd"><a href="{% url 'loading_ccd' %}" style="text-decoration:none;">충청도</a></p>
+                        <p id="jld"><a href="{% url 'loading_jld' %}" style="text-decoration:none;">전라도</a></p>
+                        <p id="gsd"><a href="{% url 'loading_ksd' %}" style="text-decoration:none;">경상도</a></p>
+                        <p id="jjd"><a href="{% url 'loading_jjd' %}" style="text-decoration:none;">제주도</a></p>
+                    </div>
+                    <!-- <img src="../../images/ko_aze.png"> -->
+            </div>
+            
+            <div class="right">
+                <button type="button" class="collapsible" id="foreign" onclick="collapse(this);">외국</button>
+                <div class="content">
+                    <p><a href="{% url 'engQ' %}" style="text-decoration:none;">★★★외쿡</a></p>
+                </div>
+                <!-- <img src="../../images/en_aze.png"> -->
+            </div>
+        </div>
+</body>
+</html>

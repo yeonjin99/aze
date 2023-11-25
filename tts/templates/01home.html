@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/01home.css' %}" rel="stylesheet" type="text/css" />
+
+    <link rel="01home.css" media="all and (min-width:1200px)" href="desktop.css" >
+    <link rel="01home.css" media="all and (min-width:768px) and (max-width:1199px)" href="laptop.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style=background-color:rgb(255,181,70);>
+
+    <div class="login">
+        <a href="{% url 'login' %}" style="text-decoration:none; color: white;">로그인</a>
+    </div>
+
+    <div class="join">
+        <a href="{% url 'signup' %}" style="text-decoration:none; color: white;">회원가입</a>
+    </div>
+
+    <div class="home_aze">
+        <img src="../static/images/home_aze.jpg" alt="aze" width="500" height="600
+        ">
+        <div class="aze">A Z E</div>
+    </div>
+
+    
+    
+    <!-- <div class="aze_text">
+        <h3>AZE</h3>
+    </div> -->
+
+</body>
+</html>

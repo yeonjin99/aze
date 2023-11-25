@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/aze_login.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <a href="{% url 'home' %}" style="text-decoration:none"><h3>A Z E</h3></a>
+
+    <h3 style="font-size: 40pt;">login</h3>
+
+    
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+         <div class="container">
+        <!-- ID, PW 입력 -->
+            <div class="input_login">
+                <input type="text" name="username" placeholder="ID">
+                <input type="password" name="password" placeholder="PASSWORD">
+            </div>
+            <!-- 로그인 버튼 -->
+            <div  class= "login_btn">
+                <input type="submit" value="login">
+            </div>
+
+            <p class="error">{{ error }}</p>
+            <!-- 아직 회원이 아니신가요 -->
+            <div class="not_yet">
+                <a href="{% url 'signup' %}"><p>아직 회원이 아니신가요?</p></a>
+            </div>
+         </div>   
+    </form>
+
+</body>
+</html>

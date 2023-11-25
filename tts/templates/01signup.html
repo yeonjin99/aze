@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/aze_signup.css' %}" rel="stylesheet" type="text/css" />
+    <title>SIGNUP</title>
+</head>
+<body>
+    <a href="{% url 'home' %}" style="text-decoration:none"><h3>A Z E</h3></a>
+
+    <h3 style="font-size: 30pt;">회원가입</h3>
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <div class="input_signup">
+                <div class="individual">
+                    <span>아이디</span>
+                    <input type="text" name="username" placeholder=" 아이디를 입력하세요.">
+                </div>
+                <div class="individual">
+                    <span>비밀번호</span>
+                    <input type="password" name="password" placeholder=" 비밀번호를 입력해주세요.">
+                </div>
+                <div class="individual">
+                    <span>비밀번호 확인</span>
+                    <input type="password" name="password_confirm" placeholder=" 비밀번호를 확인해주세요.">
+                </div>
+                <div class="individual">
+                    <span>닉네임</span>
+                    <input type="text" name="nickname" placeholder=" 닉네임을 입력해주세요.">
+                </div>
+            </div>
+            <p>{{ error }}</p>
+            <div class="signup_btn">
+                <input type="submit" value="확인">
+                <input type="button" value="취소" onclick="location.href='{% url 'home' %}'">
+            </div>
+
+    </div>
+    </form>
+
+
+</body>
+</html>

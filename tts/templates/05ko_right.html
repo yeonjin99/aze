@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/05.css' %}" rel="stylesheet" type="text/css" />
+    <style>
+        div { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>정답</h1>
+
+    <div>
+        <img src="../static/images/right_aze.png" alt="시무룩"  width="600px" height="370px">
+    <!-- <img> 랜덤 -->
+    </div>
+
+    <h2>그래요... 맞아요...</h2>
+    <audio autoplay="autoplay" controls="controls">
+        <source src="../static/audio/correct.mp3" allow="autoplay" type="audio/mp3" id="audio">
+    </audio>
+    
+    <div>
+        <button class="button01" onclick="location.href='{% url 'yes' %}'">처음으로 돌아가기</button>
+        <button class="button02" onclick="sendLink()">친구에게 공유하기</button>
+    </div>
+
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type='text/javascript'>
+        function sendLink() {
+            Kakao.init("59601f0266e4d6717ad7304dc2bcd1a5");
+            Kakao.Link.sendCustom({
+                templateId: 97279
+            });
+        }
+    </script>
+</body>
+</html>

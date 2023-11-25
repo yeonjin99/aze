@@ -1,0 +1,314 @@
+@media (max-width: 800px) {
+    h3, .button01, .button02 {
+    font-size: 16px;
+    width:100%;
+    }
+}
+@media (max-width: 800px) {
+    .text {
+    font-size: 16px;
+    }
+}
+@media (max-width: 800px) {
+    .aze03 {
+    width: 100%;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+h3{
+    text-align: center;
+    color: rgb(90, 90, 90);
+    font-size: 24pt;
+}
+
+#img1{
+    width: 320px;
+    height: 250px;
+    position: absolute;
+    left: 27%;
+    top: 13%;
+}
+
+#text{
+    font-size: 20pt;
+    font-weight: 900;
+    color: rgb(5, 5, 5);
+    position: absolute;
+    left: 31%;
+    top: 20.5%;
+}
+
+#speaking{
+    display: inline;
+    position: absolute;
+    left: 32%;
+    top: 25%;
+}
+
+#img2{
+    width: 500px;
+    height: 650px;
+    margin-top: 145px;
+    margin-bottom: 55px;
+}
+
+.aze_yes {
+    text-align: center;
+    height: 650px;
+    margin: 0px;
+}
+
+button{
+    font-size : 22pt;
+    background-color: rgb(255, 181, 70);
+    border: 10px solid rgb(255, 181, 70);
+    border-radius: 40px;
+    margin-left: 20;
+    margin-right: 20;
+}
+
+.button01 {
+    margin-left: 300px;
+    margin-right: 270px;
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+    font-weight: 800;
+    color: rgb(5, 5, 5);
+    margin-top: 50px;
+}
+
+.button02 {
+    margin-left: 300px;
+    /* margin-right: 100px; */
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+    font-weight: 800;
+    color: rgb(5, 5, 5);
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+구 버전 ver1
+h3{
+    text-align: center;
+    color: rgb(90, 90, 90);
+    font-size: 24pt;
+}
+
+#img1{
+    width: 320px;
+    height: 250px;
+    position: absolute;
+    left: 30%;
+    top: 13%;
+}
+
+#text{
+    font-size: 20pt;
+    font-weight: 900;
+    color: rgb(5, 5, 5);
+    position: absolute;
+    left: 34%;
+    top: 20.5%;
+}
+
+#speaking{
+    display: inline;
+    position: absolute;
+    left: 32%;
+    top: 25%;
+}
+
+#img2{
+    width: 500px;
+    height: 650px;
+    margin-top: 145px;
+    margin-bottom: 71px;
+}
+
+button{
+    font-size : 22pt; 
+    background-color: rgb(255, 181, 70);
+    border: 10px solid rgb(255, 181, 70);
+    border-radius: 40px;
+    margin-left: 20;
+    margin-right: 20;
+}
+
+.button01 {
+    position: absolute;
+    left: 18.5%;
+    width: 300px; height: 80px;
+    display: inline-block;
+    font-weight: 800; 
+    color: rgb(5, 5, 5);
+    margin-top: 50px;
+}
+
+.button02 {
+    position: absolute;
+    left: 65.5%;
+    width: 300px; height: 80px;
+    display: inline-block;
+    font-weight: 800; 
+    color: rgb(5, 5, 5);
+    margin-top: 50px;
+}
+
+ .button01 {
+    font-size :x-large; 
+    background-color: rgb(255, 181, 70);
+    border: 10px solid rgb(255, 181, 70);
+    border-radius: 15px;
+    margin-right: 300px;
+    width: 300px; 
+    height: 80px;
+    display: inline-block;
+    font-weight: 800; 
+    color: rgb(5, 5, 5);
+    position: absolute;
+    left: 15%;
+}
+
+
+.button02 {
+    font-size :x-large; 
+    background-color: rgb(255, 181, 70);
+    border: 10px solid rgb(255, 181, 70);
+    border-radius: 15px;
+    margin-left: 300px;
+    width: 300px; height: 80px;
+    display: inline-block;
+    font-weight: 800;
+    color: rgb(5, 5, 5);
+    position: absolute;
+    right: 15%;
+}
+
+
+.aze03 { 
+    text-align: center; 
+    margin-top: -60px;
+    margin-bottom: -7%;
+}
+*/
+
+/* 구버전 ver2
+@media (max-width: 800px) {
+    h3, .button01, .button02 {
+    font-size: 16px;
+    width:100%;
+    }
+}
+@media (max-width: 800px) {
+    .text {
+    font-size: 16px;
+    }
+}
+@media (max-width: 800px) {
+    .aze03 {
+    width: 100%;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+h3{
+    text-align: center;
+    color: rgb(90, 90, 90);
+    font-size: 24pt;
+}
+
+#img1{
+    width: 320px;
+    height: 250px;
+    position: absolute;
+    left: 27%;
+    top: 13%;
+}
+
+#text{
+    font-size: 20pt;
+    font-weight: 900;
+    color: rgb(5, 5, 5);
+    position: absolute;
+    left: 34%;
+    top: 20.5%;
+}
+
+#speaking{
+    display: inline;
+    position: absolute;
+    left: 32%;
+    top: 25%;
+}
+
+#img2{
+    width: 500px;
+    height: 650px;
+    margin-top: 145px;
+    margin-bottom: 55px;
+}
+
+.aze_yes {
+    text-align: center;
+    height: 650px;
+    margin: 0px;
+}
+
+button{
+    font-size : 22pt;
+    background-color: rgb(255, 181, 70);
+    border: 10px solid rgb(255, 181, 70);
+    border-radius: 40px;
+    margin-left: 20;
+    margin-right: 20;
+}
+
+.button01 {
+    margin-left: 300px;
+    margin-right: 270px;
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+    font-weight: 800;
+    color: rgb(5, 5, 5);
+    margin-top: 50px;
+}
+
+.button02 {
+    margin-left: 300px;
+    /* margin-right: 100px; */
+/*  width: 300px;
+    height: 80px;
+    display: inline-block;
+    font-weight: 800;
+    color: rgb(5, 5, 5);
+    margin-top: 50px;
+}
+*/

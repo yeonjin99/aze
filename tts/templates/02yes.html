@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/02yes.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="02yes.css" media="all and (min-width:1200px)" href="desktop.css" >
+    <link rel="02yes.css" media="all and (min-width:768px) and (max-width:1199px)" href="laptop.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <a href="{% url 'home' %}" style="text-decoration:none"><h3>A Z E</h3></a>
+
+    <div class="aze_yes">
+        {% if user.is_superuser %}
+        <div>
+            <a href="{% url 'data_dashboard' %}" style="text-decoration:none; font-size:20pt; color: pink;font-weight: 900;">DATA DASHBOARD</a>
+        </div>
+        {% else %}
+        {% endif %}
+        <img src="../static/images/speak.png" id="img1">
+        <div id="text">
+            <b>내가 재미있는</b><br>
+            <b>이야기 들려줄까?</b>
+        </div>
+            <img src="../static/images/yes_aze.png" id="img2">
+    </div>
+
+    <div>
+        <button class="button01" onclick="location.href='{% url 'choice' %}'">YES!</button>
+        <button class="button02" onclick="location.href='{% url 'index' %}'">아지트로 모여!!</button>
+    </div>
+
+
+</body>
+</html>

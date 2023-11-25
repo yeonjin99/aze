@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/board_index.css' %}" rel="stylesheet" type="text/css" />
+    <link href="board_index.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 class="h3"><a href="{% url 'yes' %}">A Z E</a></h3>
+ 
+    <h1 class="h1">아지트</h1>
+    <h4 class="h4">여러분의 아재력을 맘껏 뽐내주세요!</h4>
+    
+    <table class="tg" style="undefined; table-layout: fixed; width: 805px">
+        <colgroup>
+        <col style="width: 100px">
+        <col style="width: 100px">
+        <col style="width: 500px">
+        <col style="width: 130px">
+        </colgroup>
+    <thead>
+      <tr>
+        <th class="tg-y5z3">글번호</th>
+        <th class="tg-y5z3">작성자</th>
+        <th class="tg-y5z3">제목</th>
+        <th class="tg-y5z3">작성날짜</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if list %}
+            {% for dto in list %}
+              <tr>
+                <td class="tg-rj0a">{{ dto.id }}</td>
+                <td class="tg-rj0a">{{ dto.writer }}</td>
+                <td class="tg-rj0a"><a href="{% url 'detail' dto.id %}">{{ dto.title }}</a></td>
+                <td class="tg-rj0a">{{ dto.write_date|date:"Y-m-d" }}</td>
+              </tr>
+            {% endfor %}
+        {% else %}
+          <tr>
+            <td class="tg-i2xw" colspan="4">- - - - - 작성된 글이 없습니다 - - - - -</td>
+          </tr>
+        {% endif %}
+      <tr>
+        <td class="tg-f7vz" colspan="4"><input class="input" type="button" value="글쓰기" onclick="location.href = '{% url 'insert' %}'"></td>
+      </tr>
+    </tbody>
+    </table>
+</body>
+</html>
+  

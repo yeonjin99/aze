@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="detail.css" rel="stylesheet" type="text/css" />
+    {% load static %}
+    <link href="{% static 'css/board_detail.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ 
+    <h3 class="h3"><a href="{% url 'index' %}">A Z E</a></h3>
+ 
+
+   
+    <h1 class="h1">DETAIL</h1>
+
+
+    <table class="tg" style="undefined; table-layout: fixed; width: 898px">
+    <colgroup>
+    <col style="width: 155px">
+    <col style="width: 525px">
+    <col style="width: 75px">
+    <col style="width: 75px">
+    <col style="width: 75px">
+    </colgroup>
+    <thead>
+        <tr>
+            <th class="tg-w2i2"></th>
+            <th class="tg-gpmz" colspan="4">{{ dto.id }} 번 째 게시글 입니다.</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tg-v579">작성자</td>
+            <td class="tg-com6" colspan="4"><input class="input_user" type="text" value="{{ dto.writer }}" readonly></td>
+        </tr>
+        <tr>
+            <td class="tg-v579">제목</td>
+            <td class="tg-com6" colspan="4"><input class="input_title" type="text" value="{{ dto.title }}" readonly></td>
+
+        </tr>
+        <tr class="tg_content">
+            <td class="tg-x6df"><span style="font-weight:bold">내용</span></td>
+            <td class="tg-bhrr" colspan="4"><input class="input_content" type="text" value="{{ dto.content }}" readonly></td>
+        </tr>
+        <tr>
+            {% if dto.writer == user_id %}
+            <td class="tg-qvg3" colspan="2"></td>
+            <td class="tg-gxt8"><a href="{% url 'index' %}">목록으로</a></td>
+            <td class="tg-gxt8"><a href="{% url 'update' dto.id %}">수정하기</a></td>
+            <td class="tg-gxt8"><a href="{% url 'delete' dto.id %}">삭제하기</a></td>
+
+            {% else %}
+            <td class="tg-qvg3" colspan="2"></td>
+            <td class="tg-gxt8"></td>
+            <td class="tg-gxt8"></td>
+            <td class="tg-gxt8"><a href="{% url 'index' %}">목록으로</a></td>
+
+            {% endif %}
+        </tr>
+    </tbody>
+    </table>
+
+</body>
+</html>
+  

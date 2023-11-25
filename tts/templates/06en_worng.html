@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZE</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/06.css' %}" rel="stylesheet" type="text/css" />
+    <style>
+        div { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Wrong answer</h1>
+
+    <div>
+        <img src="../static/images/worng_aze.jpg" alt="lol"  width="400px" height="530px">
+        <!-- <img> 랜덤 -->
+    </div>
+
+    <h2>lol  The answer is "{{ ts_ans }} ({{ en_ans }})"  lol</h2>
+    <audio autoplay="autoplay" controls="controls" hidden="hidden">
+        <source src="../static/audio/wrong.mp3" allow="autoplay" type="audio/mp3" id="audio">
+    </audio>
+    <div>
+        <button class="button01" onclick="location.href='{% url 'yes' %}'">Home</button>
+        <button class="button02" onclick="sendLink()">Share</button>
+    </div>
+
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type='text/javascript'>
+        function sendLink() {
+            Kakao.init("59601f0266e4d6717ad7304dc2bcd1a5");
+            Kakao.Link.sendCustom({
+                templateId: 97279
+            });
+        }
+    </script>
+</body>
+</html>

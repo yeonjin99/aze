@@ -1,0 +1,107 @@
+@media screen and (min-width: 800px){
+    body{
+        font-size: 16px;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+body{
+    /* background-image: url('../../images/ko_aze.png'),
+                      url('../../images/en_aze.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: left top, right top; */
+    background-image: url('../images/aze_concat.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    /* 배경 보고 선택 고고 */
+    /* 사진 흐리게 바꾸면 폴더에서 사진갈아끼우고 저거주석풀고 밑에꺼지우기 고고 */
+}
+
+h2{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    text-align: center;
+    color: rgb(90, 90, 90);
+    font-size: 24pt;
+    /* font-style: italic; */
+    background-color: white;
+    /* padding-top: 100px; */
+
+}
+
+.collapsible {
+    background: rgba(78, 78, 78, 0.5);
+    filter: brightness(0.6);
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 30px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    /* position: relative;
+    top: -25px; */
+}
+
+.collapsible:hover{
+    background-color:rgba(255, 255, 255, 0.141);
+}
+
+.active {
+    background-color:rgba(255, 255, 255, 0.141);
+    filter: brightness(0.1);
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(255, 255, 255, 0.312);
+    filter: brightness(0.2);
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+p a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div .left {
+    width: 50%;
+    height: 100%;
+    float: left;
+    /* background-color: #ffffff; */
+    /* background-color: rgba( 255, 255, 255, 0.5 ); */
+    position: relative;
+    top: -25px;
+}
+
+div .right {
+    width: 50%;
+    height: 100%;
+    float: right;
+    /* background-color: #ffffff; */
+    /* background-color: rgba( 255, 255, 255, 0.5 ); */
+    position: relative;
+    top: -25px;
+}
+
+
