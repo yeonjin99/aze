@@ -53,7 +53,7 @@
 
 **2. 카카오톡 친구에게 전송하기 API**
 
-* python 3.10 version
+* python 3.10.12 version
 
 <h3>서비스시연</h3>
 https://drive.google.com/drive/folders/1FgLfQ7T5bhSVPqfQ_XlwhR7bndohw0ux?usp=sharing
