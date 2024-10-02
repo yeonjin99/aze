@@ -56,4 +56,4 @@
 * python 3.10.12 version
 
 <h3>서비스시연</h3>
-https://drive.google.com/drive/folders/1FgLfQ7T5bhSVPqfQ_XlwhR7bndohw0ux?usp=sharing
+https://youtu.be/KIK-9EieWc8
